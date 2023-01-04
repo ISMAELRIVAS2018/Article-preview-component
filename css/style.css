@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+
+:root {
+
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+    --white: hsl(0, 0%, 100%);
+
+    --fuente-principal: 'Manrope', sans-serif;
+    --Font-size: 1.3rem;
+
+}
+
+html {
+    font-size: 65.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+img {
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+body {
+    background-color: var(--Light-Grayish-Blue);
+    
+}
+
+.wrapper {
+    max-width: 120rem;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.7rem;
+}
+
+.card{
+   
+    /* min-width: 28rem; */
+    /* max-width: 27rem; */
+    display: grid;
+    border-radius: 1rem;
+    background-color: var(--white);
+    font-family: var(--fuente-principal);
+    box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.1);
+
+}
+
+/* @media (min-width: 450px) { 
+    .card{
+        max-width: 40rem;
+    }
+} */
+
+@media (min-width: 768px) { 
+    .card{
+      max-width: 64rem;
+      max-height: 25rem;
+      display: grid;
+      grid-template-columns: 40% 60%;
+    }    
+}
+
+.card_imagenn{
+    height: 21rem;
+    float: left;
+    overflow: hidden;
+
+}
+.card_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 1rem 1rem 0 0;
+}
+.card_item{
+    padding: 0 3rem 2rem;
+    position: relative;
+}
+
+
+@media (min-width: 768px) { 
+    .card_imagenn{
+        height: 25rem;
+    }
+    .card_img{
+        object-position: left;
+        border-radius: 1rem 0 0 1rem;
+    }
+}
+
+
+.cart_title{
+    padding-top: 3rem;
+    margin: 0;
+    color: var( --Very-Dark-Grayish-Blue);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.card_text{
+    color: var(--Grayish-Blue);
+    font-weight: 500;
+    font-size: 1.23rem;
+    line-height: 1.5;
+    margin: 0;
+    padding-bottom: 3rem;
+}
+
+.card_information{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card_info{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.card_imagen{
+    max-width: 3.5rem;
+    border-radius: 5rem;
+}
+
+.card_name {
+    color: var(--Very-Dark-Grayish-Blue);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.card_date{
+    color: var(--Grayish-Blue);
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding-top: .5rem;
+}
+
+.card_btn{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 5rem;
+    cursor: pointer;
+    border: none;
+    background-color: var(--Light-Grayish-Blue) ;
+    transition:  background-color .3s ease-in-out;
+}
+
+.card_btn:hover{
+    background-color: var(  --Grayish-Blue);
+    cursor: pointer;
+}
+/* ==================== card ============== */
+
+
+
+.card_hide_container {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.6rem 1.25rem;
+    border-radius: 0px 0px 1rem 1rem;
+    background: var( --Very-Dark-Grayish-Blue);
+    bottom: 0%;
+    left: 0%;
+
+   
+  }
+
+  .card_hide_container.hide{
+    display: none;
+  }
+  
+  .social_media_links {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    list-style:none
+  }
+
+  .card_hide_container  p {
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    color: var( --Grayish-Blue);
+  }
+
+  .icon {
+    font-size: 1.38rem;
+    color: white;
+  }
+  
+  .icon:is(:hover, :focus-visible) {
+    color: var(--Light-Grayish-Blue);
+  }
+
+  @media (min-width:768px) { 
+    .card_hide_container {
+        max-width: 55%;
+        bottom: 34%;
+        left: 60%;
+        justify-content: center;
+        padding: 1.4rem 1.25rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 0.94rem 0.06rem rgba(0, 0, 0, 0.2);
+      }
+      .card_hide_container:after {
+        position: absolute;
+        content: "";
+        right: 9.5rem;
+        bottom: -0.88rem;
+        border-top: 0.88rem solid var( --Very-Dark-Grayish-Blue);
+        border-right: 0.88rem solid transparent;
+        border-left: 0.88rem solid transparent;
+      }
+    
+    
+/* .hide{
+    display: none;
+  } */
+  }
+
